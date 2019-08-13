@@ -345,7 +345,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-12 12:07:46" itemprop="dateModified" datetime="2019-08-12T12:07:46+08:00">2019-08-12</time>
+                <time title="修改时间：2019-08-13 09:21:10" itemprop="dateModified" datetime="2019-08-13T09:21:10+08:00">2019-08-13</time>
               </span>
             
           
@@ -395,49 +395,27 @@
 
       
         
-          
-            <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="1-主机配置："><a href="#1-主机配置：" class="headerlink" title="1.主机配置："></a>1.主机配置：</h4><ul>
+          <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="主机配置："><a href="#主机配置：" class="headerlink" title="主机配置："></a>主机配置：</h4><ul>
 <li>处理器: 英特尔  J1900  1.99GHz 四核</li>
 <li>内存: 4GB （DDR3 1333MHz）</li>
 <li>硬盘: 16G（ mSATA  固态）</li>
 <li>网卡: 英特尔 I211 千兆网口</li>
 </ul>
-<h4 id="2-硬件准备："><a href="#2-硬件准备：" class="headerlink" title="2.硬件准备："></a>2.硬件准备：</h4><ul>
+<h4 id="硬件准备："><a href="#硬件准备：" class="headerlink" title="硬件准备："></a>硬件准备：</h4><ul>
 <li>U盘 * 1 （微PE系统）</li>
 <li>显示器 * 1 （VGA或HDMI接口）</li>
 <li>鼠标 * 1 （USB接口）</li>
 <li>键盘 * 1 （USB接口）</li>
 </ul>
-<h4 id="3-软件工具："><a href="#3-软件工具：" class="headerlink" title="3.软件工具："></a>3.软件工具：</h4><ul>
-<li><p>XPEnology多功能工具箱V1.3（下载引导文件与DSM系统）  <a href="http://www.nasyun.com/thread-63798-1-1.html" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-<li><p>DS918+6.21 引导文件下载   <a href="https://pan.baidu.com/s/13sHxc5s1XnyGjP2H-XzDZQ" target="_blank" rel="noopener">百度网盘</a></p>
-</li>
-<li><p>DS918+6.21 DSM系统下载   <a href="https://archive.synology.com/download/DSM/release/6.2.1/23824/DSM_DS918+_23824.pat" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-<li><p>Synology Assistant（群晖的搜索助手，用于联机安装使用）   <a href="https://www.synology.cn/zh-cn/support/download" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-<li><p>DiskImage（用于将img文件写入U盘或者硬盘内）   <a href="https://pan.baidu.com/s/12xkyhgu8I1JsxF0Zmi-GdQ" target="_blank" rel="noopener">百度网盘</a>  提取码：xhwg</p>
-</li>
-<li><p>DiskGenius（用于格式化、删除U盘分区、硬盘分区，可载入img镜像进行修改）   <a href="http://www.diskgenius.cn/download.php" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-<li><p>Notepad++（用于修改引导配置文件grub.cfg）  <a href="https://notepad-plus-plus.org/download/" target="_blank" rel="noopener">下载地址</a></p>
-</li>
-</ul>
-<h3 id="二、引导文件写入SSD"><a href="#二、引导文件写入SSD" class="headerlink" title="二、引导文件写入SSD"></a>二、引导文件写入SSD</h3><p>1.将黑群晖引导镜像 synoboot.img、DiskImage 放入U盘内。<br>2.通电开机，并按F7选择U盘启动。<br>3.使用DiskGenius，将自带16G SSD 内所有分区删除并保存。<br>4.启动 DiskImage ，驱动器选择机器内置SSD，浏览选择镜像写入（路径、文件名不能有任何中文字符）。<br>5.写入完成后，使用 DiskGenius 浏览系统内置SSD引导分区文件（ESP），将grub.cfg文件复制到U盘（之后洗白要用）。<br>6.设备关机，拔出U盘。</p>
-<h3 id="三、安装-DSM-至-NAS-主机"><a href="#三、安装-DSM-至-NAS-主机" class="headerlink" title="三、安装 DSM 至 NAS 主机"></a>三、安装 DSM 至 NAS 主机</h3><p>1.NAS主机安装储存盘， NAS主机连接网线并启动主机。<br>2.同一局域网内计算机打开 <a href="http://find.synology.com/" target="_blank" rel="noopener">http://find.synology.com/</a> 或安装 Synology Assistant 进行搜索。<br>3.选中 NAS 主机安装 DSM 系统，浏览找到 pat，按照提示安装系统。<br>4.DSM 更新和维护，不要把自动更新打开。初始化 DSM 后将自动更新彻底关掉，避免系统更新后与引导文件不匹配，造成启动失败。<br>5.初始化 DSM 完成，进入桌面后关机。</p>
-<p>四、洗白群晖</p>
-<ul>
-<li><p>没洗白：不能注册和登录QuickConnect（简称“QC”，没有公网的用户利用群晖服务器进行内网穿透）；DS Photo/Moments 预览图黑的；DS Video的视频质量高、中、低码率不能切换，只能选择原码；DS Video不能离线转码。</p>
-</li>
-<li><p>半洗白：不能注册和登录QuickConnect，DS Photo/Moments 预览图正常；DS Video的视频质量高、中、低码率可以自由切换；DS Video可以离线转码。</p>
-</li>
-<li><p>全洗白：可以注册和登录QuickConnect，DS Photo/Moments和DS Video没有限制。</p>
-</li>
-</ul>
-<p>1.Notepad++打开复制至U盘的grub.cfg文件，找到下图框中字段（24-25行）。<br>2.将SN=1780PDN后的6位数字123456改为随机数字（不同型号引导格式会略有不同），将mac1=后文字全部删除，填写为NAS主机MAC地址（蜗牛星际在右上角有贴，或者直接去路由器后台看），MAC地址不需要含“:”或“-”符号，如“11-AA……”或“11:AA……”这种格式，直接写“11AA……”即可，修改完成后保存。<br>3.NAS 主机关机，插入U盘启动，通过 DiskGenius 替换引导分区内的 grub.cfg 文件，重启 NAS 主机。</p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/synology/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
